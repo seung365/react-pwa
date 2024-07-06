@@ -1,7 +1,7 @@
 import MainPage from "@/pages/MainPage"
 import LoginPage from "@/pages/LoginPage"
 import GiftDetailPage from "@/pages/GiftDetailPage"
-import { createBrowserRouter, Navigate } from "react-router-dom"
+import { createHashRouter, Navigate } from "react-router-dom"
 import { Outlet } from "react-router-dom"
 import Header from "@/components/Header/Header"
 import Footer from "@/components/Footer/Footer"
@@ -14,7 +14,6 @@ const Container = styled.div`
 `
 
 const Layout = () => {
-  // header와 footer에 가리지 않에 padding 추가
   return (
     <Container>
       <Header />
@@ -26,9 +25,9 @@ const Layout = () => {
   )
 }
 
-const RouterInfo = createBrowserRouter([
+const RouterInfo = createHashRouter([
   {
-    path: "/react-pwa",
+    path: "/",
     element: <Layout />,
     children: [
       {
@@ -36,15 +35,15 @@ const RouterInfo = createBrowserRouter([
         element: <MainPage />,
       },
       {
-        path: "/my-account",
+        path: "my-account",
         element: <PrivateRoute />,
       },
       {
-        path: "/theme/:themekey",
+        path: "theme/:themekey",
         element: <GiftDetailPage />,
       },
       {
-        path: "/theme",
+        path: "theme",
         element: <Navigate to="/" replace />,
       },
     ],
