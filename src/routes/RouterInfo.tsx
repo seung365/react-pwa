@@ -28,7 +28,7 @@ const Layout = () => {
 
 const RouterInfo = createBrowserRouter([
   {
-    path: "/react-pwa",
+    path: "/",
     element: <Layout />,
     children: [
       {
