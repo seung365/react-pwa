@@ -6,7 +6,12 @@ window.addEventListener("beforeinstallprompt", (event) => {
   console.log(event)
 })
 
-document.getElementById("installButton").addEventListener("click", installApp)
+window.addEventListener("DOMContentLoaded", () => {
+  const installButton = document.getElementById("installButton")
+  if (installButton) {
+    installButton.addEventListener("click", installApp)
+  }
+})
 
 function installApp() {
   if (!deferredPrompt) {
