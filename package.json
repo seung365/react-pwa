@@ -2,16 +2,16 @@
   "name": "kakao-tech-campus-frontend-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://seung365.github.io/react-pwa",
   "scripts": {
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://seung365.github.io/react-pwa/",
   "browserslist": {
     "production": [
       ">0.2%",
