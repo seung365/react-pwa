@@ -2,4 +2,4 @@
 
 [DEMO 실행] (https://github.com/seung365/react-pwa)
 
-안드로이드 및 ios에서 PWA로도 설치 가능합니다.
+- 안드로이드 및 ios에서 PWA로도 설치 가능합니다.
