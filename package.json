@@ -9,6 +9,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "homepaeg": "https://react-pwa-six-pink.vercel.app/",
   "browserslist": {
     "production": [
       ">0.2%",
