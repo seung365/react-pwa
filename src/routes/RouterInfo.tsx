@@ -1,34 +1,34 @@
-import MainPage from '@/pages/MainPage';
-import LoginPage from '@/pages/LoginPage';
-import GiftDetailPage from '@/pages/GiftDetailPage';
-import { createBrowserRouter, Navigate } from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
-import styled from '@emotion/styled';
-import PrivateRoute from '@/routes/PrivateRoute';
+import MainPage from "@/pages/MainPage"
+import LoginPage from "@/pages/LoginPage"
+import GiftDetailPage from "@/pages/GiftDetailPage"
+import { createBrowserRouter, Navigate } from "react-router-dom"
+import { Outlet } from "react-router-dom"
+import Header from "@/components/Header/Header"
+import Footer from "@/components/Footer/Footer"
+import styled from "@emotion/styled"
+import PrivateRoute from "@/routes/PrivateRoute"
 
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-`;
+`
 
 const Layout = () => {
   // header와 footer에 가리지 않에 padding 추가
   return (
     <Container>
       <Header />
-      <main style={{ paddingBottom: '60px', paddingTop: '60px' }}>
+      <main style={{ paddingBottom: "60px", paddingTop: "60px" }}>
         <Outlet />
       </main>
       <Footer />
     </Container>
-  );
-};
+  )
+}
 
 const RouterInfo = createBrowserRouter([
   {
-    path: '/',
+    path: "/react-pwa",
     element: <Layout />,
     children: [
       {
@@ -36,23 +36,23 @@ const RouterInfo = createBrowserRouter([
         element: <MainPage />,
       },
       {
-        path: '/my-account',
+        path: "/my-account",
         element: <PrivateRoute />,
       },
       {
-        path: '/theme/:themekey',
+        path: "/theme/:themekey",
         element: <GiftDetailPage />,
       },
       {
-        path: '/theme',
+        path: "/theme",
         element: <Navigate to="/" replace />,
       },
     ],
   },
   {
-    path: '/login',
+    path: "/login",
     element: <LoginPage />,
   },
-]);
+])
 
-export default RouterInfo;
+export default RouterInfo
