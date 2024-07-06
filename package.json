@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
