@@ -11,7 +11,7 @@ const GiftDetailPage = () => {
         <Grid columns={{ initial: 2, md: 3, lg: 4 }} gap={10}>
           <ItemWrapper>
             <DefaultGoodsItems
-              imageSrc={`${process.env.PUBLIC_URL}/images/gift.jpg`}
+              imageSrc="/images/gift.jpg"
               subtitle="BBQ"
               title="BBQ 양념치킨"
               amount={29000}
